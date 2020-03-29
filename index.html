@@ -32,68 +32,108 @@
 	
 		<article>
 		
-			<form action="" method="post">
+			<form action="order.php" method="post">
+
+					<div class="row">
+
+						<fieldset>
+
+							<legend>Rodzaj nadwozia</legend>
+
+								<div><label><input type="radio" value=1 name="body" checked>Hatchaback</label></div>
+								<div><label><input type="radio" value=1 name="body">Sedan</label></div>
+								<div><label><input type="radio" value=1 name="body">Coupe</label></div>
+
+						</fieldset>
+
+					</div>	
+
+					<div class="row">
+
+						<label for="silnik">Rodzaj silnika</label>
+						<select id="silnik" name="silnik">
+
+								<option value="w">wysokoprężny</option>
+								<option value="b" selected>benzynowy</option>
+								<option value="e">elektryczny</option>
+								<option value="h">hybrydowy</option>
+
+						</select>
+
+					</div>
+
+					<div class="row">
+
+						<fieldset>
+
+							<legend>Wyposażenie samochodu</legend>
+
+								<div class="col">
+									<div><label><input type="checkbox" name="wyp[]" value="1" checked disabled>ESP</label></div>
+									<div><label><input type="checkbox" name="wyp[]" value="2" checked disabled>ABS</label></div>
+									<div><label><input type="checkbox" name="wyp[]" value="3" >Klimatyzacja</label></div>
+									<div><label><input type="checkbox" name="wyp[]" value="4" >Składane lusterka</label></div>
+								</div>
+
+								<div class="col">
+									<div><label><input type="checkbox" name="wyp[]" value="5" >4X4</label></div>
+									<div><label><input type="checkbox" name="wyp[]" value="6" >Xenon</label></div>
+									<div><label><input type="checkbox" name="wyp[]" value="7" >Led</label></div>
+									<div><label><input type="checkbox" name="wyp[]" value="8" >Okno panoramiczne</label></div>
+								</div>
+
+								<div class="col">
+									<div><label><input type="checkbox" name="wyp[]" value="9" >Automatyczna skrzynia biegów</label></div>
+									<div><label><input type="checkbox" name="wyp[]" value="10" >Manualna skrzynia biegów</label></div>
+									<div><label><input type="checkbox" name="wyp[]" value="11" >Aluninowe obręcze kół</label></div>
+									<div><label><input type="checkbox" name="wyp[]" value="12" >Felgi skręcane</label></div>
+								</div>
+
+						</fieldset>
+
+					</div>
+
+					<label for="choinka">Jakie choinki zapachowe?</label>
+
+					<div style="margin-top: 10px;">
+						<select id="choinka" name="choinka[]" multiple size="4" multiple>
+
+								<option value="k">kokosowa</option>
+								<option value="b" selected>bananowa</option>
+								<option value="w">wiśniowa</option>
+								<option value="c">czereśniowa</option>
+
+						</select>
+					</div>
+
+
 
 				<div class="row">
 
-				<fieldset>
-
-					<legend>Rodzaj nadwozia</legend>
-
-						<div><label><input type="radio" value=1 name="body" checked>Hatchaback</label></div>
-						<div><label><input type="radio" value=1 name="body">Sedan</label></div>
-						<div><label><input type="radio" value=1 name="body">Coupe</label></div>
-
-				</fieldset>
-
-				</div>	
-
-				<div class="row">
-
-				<label for="silnik">Rodzaj silnika</label>
-				<select id="silnik" name="silnik">
-
-						<option value="w">wysokoprężny</option>
-						<option value="b" selected>benzynowy</option>
-						<option value="e">elektryczny</option>
-						<option value="h">hybrydowy</option>
-
-				</select>
+					<label>Imię<input type="text" name="imie" placeholder="Twoje imię"></label>
+					<label>Hasło<input type="password" name="haslo"></label>
+					<label>Szukaj<input type="search" name="szukaj"></label>
 
 				</div>
 
 				<div class="row">
 
-					<fieldset>
+					<label>Ile kluczyków? <input type="number"></label>
 
-						<legend>Wyposażenie samochodu</legend>
+				</div>
+				
+				<div class="row">
 
-						<div><label><input type="checkbox">Klimatyzacja</label></div>
-						<div><label><input type="checkbox">ESP</label></div>
-						<div><label><input type="checkbox">ABS</label></div>
-						<div><label><input type="checkbox">4X4</label></div>
-						<div><label><input type="checkbox">Xenon</label></div>
-						<div><label><input type="checkbox">Led</label></div>
-
-
-
-
-
-					</fieldset>
-
-
+					<input type="submit" value="Zamawiam!" name="kluczyk" step="1">
 
 				</div>
 
 			</form>
-
-			
-
-			</form>		
-			
+		
 		</article>
 		
 	</main>
+
 
 </body>
 </html>
