@@ -29,4 +29,8 @@ h1
 	display: inline-block;
 }
 
-
+#komentarz
+{
+	resize: none;
+	background-color: violet;
+}
